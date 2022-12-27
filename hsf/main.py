@@ -8,7 +8,7 @@ app.static("/static/main.css", "static/css/main.css", name="stylesheet")
 @app.get("/")
 @app.ext.template("home.html")
 async def handler(request: Request):
-    return {"seq": ["one", "two"]}
+    return {"services": ["Food", "Sleep", "Doctor", "Clothes", "Shower", "Washroom", "Laundry", "Someone to Talk To"]}
 
 if __name__ == '__main__':
     app.run()
