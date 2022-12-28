@@ -163,3 +163,4 @@ cython_debug/
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
+*.sqbpro
