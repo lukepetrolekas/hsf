@@ -1,13 +1,15 @@
 
 {% extends 'base.html' %}
 
-{% block content %}
+{% block title %}
+Homeless Services Finder - Toronto
+{% endblock %}
 
+{% block content %}
 <h2>Services</h2>
 <ul>
     {% for item in services %}
     <li><button>{{ item }}</button></li>
     {% endfor %}
 </ul>
-
 {% endblock %}
