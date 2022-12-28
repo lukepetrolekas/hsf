@@ -1,0 +1,4 @@
+# Code owners are automatically requested for review when someone opens a pull request for files in this repository
+
+# These owners will be the default owners for everything in the repository
+* @kleungssense @tfreedman @lukepetrolekas
