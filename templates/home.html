@@ -7,10 +7,46 @@ Homeless Services Finder - Toronto
 
 {% block content %}
 <h2>Services</h2>
+<h3>Immediate Need</h3>
 <ul>
-    {% for item in services %}
-    <li><button>{{ item }}</button></li>
-    {% endfor %}
+    <li><button>Meal</button></li>
+    <li><button>Shelter</button></li>
+    <li><button>Harm Reduction</button></li>
+    <li><button>Washroom</button></li>
+    <li><button>Emergency</button></li>
+    <li><button>Doctor</button></li>
+</ul>
+
+<!-- Non-Urgent Needs -->
+<h3>Hygiene</h3>
+<ul>
+    <li><button>Shower</button></li>
+    <li><button>Laundry</button></li>
+</ul>
+
+<h3>Personal Items</h3>
+<ul>
+    <li><button>Clothing</button></li>
+    <li><button>Laundry</button></li>
+</ul>
+
+<h3>Hang Out</h3>
+<ul>
+    <li><button>Social</button></li>
+    <li><button>Laundry</button></li>
+</ul>
+
+<h3>Money</h3>
+<ul>
+    <li><button>Financial Help</button></li>
+    <li><button>Banking</button></li>
+</ul>
+
+<h3>Other</h3>
+<ul>
+    <li><button>Someone to Talk To</button></li>
+    <li><button>Family</button></li>
+    <li><button>Legal</button></li>
 </ul>
 
 <h2>Results</h2>
