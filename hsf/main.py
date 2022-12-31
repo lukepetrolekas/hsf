@@ -1,5 +1,5 @@
 from sanic import Sanic
-from sanic.response import Request
+from sanic.response import Request, HTTPResponse
 from tortoise.contrib.sanic import register_tortoise
 import os
 
@@ -16,7 +16,7 @@ register_tortoise(
 @app.get("/")
 @app.ext.template("home.html")
 async def handler(request: Request):
-    return {"services": ["Food", "Sleep", "Doctor", "Clothes", "Shower", "Washroom", "Laundry", "Someone to Talk To"]}
-
+    return {}
+    
 if __name__ == '__main__':
     app.run()
