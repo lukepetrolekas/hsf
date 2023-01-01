@@ -6,7 +6,38 @@ Homeless Services Finder - Toronto
 {% endblock %}
 
 {% block content %}
+<form>
 <h2>Services</h2>
+
+<h3>Demographic Filters</h3>
+
+<label for="gender">Gender Preference</label>
+<select id="gender" name="gender">
+  <option value="all">Any</option>
+  <option value="m">Men</option>
+  <option value="f">Women</option>
+  <option value="t">Transgender</option>
+</select>
+
+<label for="age">Age</label>
+<input id="age" type="number" min="10" max="125" value="30">
+
+<label for="xpref">LGTBQ+</label>
+<input id="xpref" type="checkbox">
+
+<label for="lang">Language</label>
+<input list="browsers" placeholder="English">
+  <datalist id="browsers">
+    <option value="English">
+    <option value="French">
+    <option value="Language">
+    <option value="Language">
+    <option value="Language">
+  </datalist>
+
+<label for="lang">Time</label>
+<input id="dt" type="datetime-local"> 
+
 <h3>Immediate Need</h3>
 <ul>
     <li><button>Meal</button></li>
@@ -48,4 +79,14 @@ Homeless Services Finder - Toronto
     <li><button>Family</button></li>
     <li><button>Legal</button></li>
 </ul>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script lang="javascript">
+    $( document ).ready(function() {
+        var now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        document.getElementById('dt').value = now.toISOString().slice(0,16);
+    });
+</script>
 {% endblock %}
