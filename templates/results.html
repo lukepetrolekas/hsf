@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
+{% block title %}
+Homeless Services Finder - Toronto Results
+{% endblock %}
+
 {% block content %}
-<h2>Results</h2>
+<h2>Results {{ service }}</h2>
 <table>
     <thead>
         <th>
@@ -40,4 +44,4 @@
     </tr>
     </tbody>
 </table>
-{ % endblock % }
+{% endblock %}

@@ -17,6 +17,13 @@ register_tortoise(
 @app.ext.template("home.html")
 async def handler(request: Request):
     return {}
+
+
+@app.get("/results")
+@app.ext.template("results.html")
+async def handler(request: Request):
+    return { "service": request.args['service'] }
+    
     
 if __name__ == '__main__':
     app.run()
