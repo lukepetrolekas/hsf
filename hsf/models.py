@@ -12,8 +12,8 @@ class Operator(Model):
     address = fields.CharField(256)
     # total statement of all services
     gender = fields.IntField()
-    sexpref = fields.IntField()
-    minority = fields.BooleanField()
+    sexpref = fields.BooleanField()
+    Languages = fields.CharField(50)
 
 class Service(Model):
     id = fields.IntField(pk=True)
