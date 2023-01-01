@@ -2,6 +2,7 @@ from sanic import Sanic
 from sanic.response import Request, HTTPResponse
 from tortoise.contrib.sanic import register_tortoise
 import os
+from models import Service
 
 print(os.getcwd())
 
@@ -22,7 +23,8 @@ async def handler_home(request: Request):
 @app.get("/results")
 @app.ext.template("results.html")
 async def handler_results(request: Request):
-    return { "service": request.args['service'] }
+    relevant_services = await Service.all();
+    return { "type": request.args['service'], "services": relevant_services }
 
 if __name__ == '__main__':
     app.run()

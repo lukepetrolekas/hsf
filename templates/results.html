@@ -5,7 +5,11 @@ Homeless Services Finder - Toronto Results
 {% endblock %}
 
 {% block content %}
-<h2>Results {{ service }}</h2>
+<h2>Results {{ type }}</h2>
+
+<p>
+    {{ services }}
+</p>
 <table>
     <thead>
         <th>
@@ -25,23 +29,26 @@ Homeless Services Finder - Toronto Results
         </th>
     </thead>
     <tbody>
-    <tr>
-        <td>
-            St Michael's Hospital
-        </td>
-        <td>
-            Emergency Care
-        </td>
-        <td>
-            All Hours
-        </td>
-        <td>
-            5.5 Km
-        </td>
-        <td>
-            <a>Directions</a>
-        </td>
-    </tr>
+
+        {% for s in services %}
+        <tr>
+            <td>
+                St Michael's Hospital
+            </td>
+            <td>
+                Emergency Care
+            </td>
+            <td>
+                All Hours
+            </td>
+            <td>
+                {{ s.minAge }}
+            </td>
+            <td>
+                <a>Directions</a>
+            </td>
+        </tr>
+        {% endfor %}
     </tbody>
 </table>
 {% endblock %}
