@@ -16,9 +16,6 @@ Homeless Services Finder - Toronto Results
             Operator
         </th>
         <th>
-            Service
-        </th>
-        <th>
             Opening Hours
         </th>
         <th>
@@ -33,16 +30,13 @@ Homeless Services Finder - Toronto Results
         {% for s in services %}
         <tr>
             <td>
-                St Michael's Hospital
-            </td>
-            <td>
-                Emergency Care
+                {{ s.operator.name }}
             </td>
             <td>
                 All Hours
             </td>
             <td>
-                {{ s.minAge }}
+                Calculated Distance
             </td>
             <td>
                 <a>Directions</a>
