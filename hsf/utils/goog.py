@@ -42,7 +42,7 @@ def maps_url_search(query: str, base: str = base_url):
 
 
 # TODO: directions
-def maps_url_directions(origin: str, destination: str, travelmode: str, waypoints, str):
+def maps_url_directions(origin: str, destination: str, travelmode: str, waypoints: str):
 	# N.b. all kwargs needs to be fed through str_enc()
 	return NotImplemented
 
