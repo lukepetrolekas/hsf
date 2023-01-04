@@ -24,7 +24,7 @@ async def handler_home(request: Request):
 @app.ext.template("results.html")
 async def handler_results(request: Request):
     relevant_services = await Service.all();
-    return { "type": request.args['service'], "services": relevant_services }
+    return { "type": request.args.get("type"), "services": relevant_services }
 
 if __name__ == '__main__':
     app.run()
